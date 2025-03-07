@@ -1,0 +1,52 @@
+a) What is a conceptual data model, and why is it important?
+
+    För att ge en enkel överblick hur man vill lägga upp databasens struktur. 
+
+b) Storing age in a database, is that a good idea, why?
+
+    Nej det är inte en bra ide. På grund av att man åldras så kommer man vara tvungen
+    att ändra det manuellt varje år. Då är det bättre att lagra Födelsedag istället. 
+
+c) What are the three types of data structures, and how do they differ?
+
+    structured data
+        Strukturerad i schemas 
+    
+    semi-structured data
+        Delvis strukturead data som inte passar in i ett table ex. JSON
+    
+    unstructured data
+        Saknar någon typ av struktur som gör det svårt att prosessa 
+        ex. Ljud, bild, video, pdf osv. 
+
+d) Give examples of how each data structure is used in real-world applications
+
+    structured data: Buissness exel sheets eller datadaser
+
+    semi-structured data: APIer 
+
+    unstructured data: Appar som ex Spotify, Instagram, Youtube
+
+
+e) What is cardinality in data modeling, and why is it important?
+
+   Det beskriver antalet relationer mellan entiteter i en databas.
+   One to One
+   One to Meny 
+   Meny to One 
+   Meny to Meny
+
+f) What are the different steps of data modeling?
+
+    1. Business Requierments 
+    2. Entities and Relationship
+    3. Conseptuel model
+    4. Logical model
+    5 Physical mobel
+
+g) What factors influence the choice between using an RDBMS and NoSQL?
+
+    RDBMS passar strukturerad data ex. Banksystem, Sjukhusdata, bokningsdata.
+
+    NoSQL passar semi-strukturead och ostrukturerad data 
+    ex. JSON, Sociala medier och realtids data
