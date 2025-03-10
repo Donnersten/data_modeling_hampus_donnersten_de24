@@ -175,21 +175,21 @@ a, Identify entities and their relationships
 b, Come up with possible attributes for the entities
 
 student
-| student_id, | student_name| student_lastname |
-| ----------- | ----------- | -----------------|
-| 1           | Bob         | Bobsson          |
-| 2           | Sve         | Svensson         |
+| student_id, | student_name | student_lastname |
+| ----------- | ------------ | ---------------- |
+| 1           | Bob          | Bobsson          |
+| 2           | Sve          | Svensson         |
 
 Course
-| course_id,  | course_name| proffesor_id      |
-| ----------- | ----------- | -----------------|
-| 1           | Svenska     | 1                |
-| 2           | Engelska    | 2                |
+| course_id, | course_name | proffesor_id |
+| ---------- | ----------- | ------------ |
+| 1          | Svenska     | 1            |
+| 2          | Engelska    | 2            |
 
-| proffesor_id, | proffesor_name| proffesor_lastname |
-| --------------| --------------|--------------------|
-| 1             | Olle          | Olsson             |
-| 2             | Erik          | Eriksson           |
+| proffesor_id, | proffesor_name | proffesor_lastname |
+| ------------- | -------------- | ------------------ |
+| 1             | Olle           | Olsson             |
+| 2             | Erik           | Eriksson           |
 
 c, Draw conceptual ERD with cardinalities
 <img src = "../assets/universety_ex5.png" width=500>
@@ -204,41 +204,41 @@ d, Define business rules (e.g. a student can enroll in max 4 courses)
 a, Identify key entities and their attributes (e.g., customer_name, order_date)
 
 customer
-| customer_id, | customer_name| customer_lastname |
-| ----------- | ----------- | -----------------|
-| 1           | Bob         | Bobsson          |
-| 2           | Sve         | Svensson         |
+| customer_id, | customer_name | customer_lastname |
+| ------------ | ------------- | ----------------- |
+| 1            | Bob           | Bobsson           |
+| 2            | Sve           | Svensson          |
 
 order
-| order_id,   |customer_id | order_product | order_amount | order_price  |
-| ------------|------------|---------------| -------------|--------------|
-| 1           | 1          | Hoodie        | 5            | 1000         | 
-| 1           | 1          | jeans         | 2            | 1200         |
+| order_id, | customer_id | order_product | order_amount | order_price |
+| --------- | ----------- | ------------- | ------------ | ----------- |
+| 1         | 1           | Hoodie        | 5            | 1000        |
+| 1         | 1           | jeans         | 2            | 1200        |
 
-| order_product_id| order_id      | product_id |
-| ----------------| --------------|---------------|
-| 1               | 1             | 1           |
-| 2               | 1             | 2           |
+| order_product_id | order_id | product_id |
+| ---------------- | -------- | ---------- |
+| 1                | 1        | 1          |
+| 2                | 1        | 2          |
 
 
 product
-| product_id,   | product_name  | product_price |
-| --------------| --------------|---------------|
-| 1             | Hoodie        | 200           |
-| 2             | Jeans         | 600           |
+| product_id, | product_name | product_price |
+| ----------- | ------------ | ------------- |
+| 1           | Hoodie       | 200           |
+| 2           | Jeans        | 600           |
 
-| product_category_id| category_id   | product_id |
-| -------------------| --------------|---------------|
-| 1                  | 1             | 1           |
-| 2                  | 2             | 1           |
-| 3                  | 2             | 2           |
-| 4                  | 3             | 2           |
+| product_category_id | category_id | product_id |
+| ------------------- | ----------- | ---------- |
+| 1                   | 1           | 1          |
+| 2                   | 2           | 1          |
+| 3                   | 2           | 2          |
+| 4                   | 3           | 2          |
 
 category
-| category_id, | category_name| 
-| --------------| --------------|
-| 1             | Byxor         |
-| 2             | Tröjor        | 
+| category_id, | category_name |
+| ------------ | ------------- |
+| 1            | Byxor         |
+| 2            | Tröjor        |
 
 
 b, Sketch the conceptual ERD.
