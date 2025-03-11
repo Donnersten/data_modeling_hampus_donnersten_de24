@@ -210,15 +210,15 @@ customer
 | 2            | Sve           | Svensson          |
 
 order
-| order_id, | customer_id | order_product | order_amount | order_price |
-| --------- | ----------- | ------------- | ------------ | ----------- |
-| 1         | 1           | Hoodie        | 5            | 1000        |
-| 1         | 1           | jeans         | 2            | 1200        |
+| order_id, | customer_id | order_amount | order_price |
+| --------- | ----------- | ------------ | ----------- |
+| 1         | 1           | 5            | 1000        |
+| 2         | 1           | 2            | 1200        |
 
 | order_product_id | order_id | product_id |
 | ---------------- | -------- | ---------- |
 | 1                | 1        | 1          |
-| 2                | 1        | 2          |
+| 2                | 2        | 2          |
 
 
 product
@@ -229,16 +229,18 @@ product
 
 | product_category_id | category_id | product_id |
 | ------------------- | ----------- | ---------- |
-| 1                   | 1           | 1          |
-| 2                   | 2           | 1          |
-| 3                   | 2           | 2          |
-| 4                   | 3           | 2          |
+| 1                   | 2           | 1          |
+| 2                   | 3           | 1          |
+| 3                   | 1           | 2          |
+| 4                   | 4           | 2          |
 
 category
 | category_id, | category_name |
 | ------------ | ------------- |
 | 1            | Byxor         |
 | 2            | Tröjor        |
+| 3            | Överdela      |
+| 4            | Underdelar    |
 
 
 b, Sketch the conceptual ERD.
@@ -247,3 +249,6 @@ b, Sketch the conceptual ERD.
 
 
 c, Define business rules
+    
+    - Utan order är det ingen kund
+    - 
