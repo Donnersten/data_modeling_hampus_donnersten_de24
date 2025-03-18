@@ -1,0 +1,38 @@
+CREATE SCHEMA IF NOT EXISTS exercises1;
+
+CREATE TABLE IF NOT EXISTS exercises1.Hospital(
+        hospital_id SERIAL primary key,
+        name VARCHAR(50) NOT NULL,
+        adress VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS exercises1.Department(
+        department_id SERIAL PRIMARY KEY,
+        name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS exercises1.Doctor(
+        doctor_id SERIAL PRIMARY KEY,
+        name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS exercises1.Department_doctor(
+        doctor_id INTEGER NOT NULL,
+        department_id INTEGER NOT NULL,
+        FOREIGN KEY (doctor_id) REFERENCES exercises1.Doctor (doctor_id),
+        FOREIGN KEY (department_id) REFERENCES exercises1.Department (department_id)
+        );
+
+CREATE TABLE IF NOT EXISTS exercises1.Hospital_department(
+        hospital_id INTEGER NOT NULL,
+        department_id INTEGER NOT NULL,
+        FOREIGN KEY (hospital_id) REFERENCES exercises1.Hospital (hospital_id),
+        FOREIGN KEY (department_id) REFERENCES exercises1.Department (department_id)
+);
+
+CREATE TABLE IF NOT EXISTS exercises1.Hospital_doctor(
+        hospital_id INTEGER NOT NULL,
+        doctor_id INTEGER NOT NULL,
+        FOREIGN KEY (hospital_id) REFERENCES exercises1.Hospital (hospital_id),
+        FOREIGN KEY (doctor_id) REFERENCES exercises1.Doctor (doctor_id)
+        );
