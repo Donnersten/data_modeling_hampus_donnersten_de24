@@ -52,3 +52,54 @@ c) Now also add price attribute. Think about what would happen when price increa
         Om Price läggs till som en attredute så kommer priset ändra alla tidigare ordrar till det nya priset. Då måste man lägga till en ny Entety
 
 d) Write SQL code to get the total price for Ragnar Lodbrok. Insert data into your tables and test it out.
+
+
+## 2. Revisiting the doctor example
+<img src = "../assets/hospital2.0.png" width=1000>
+a) Does the design fulfill 3NF, motivate based on the rules for the normal forms.
+
+    ja, Denna är 3NF. Baserat på att hospital adress är bara en gatauadress och inte en grupp men adress, postkod, stad osv...
+
+b) You should have realised from this question in exercise1 0e)that this creates ambiguity. This can be solved with a ternary relationship, which connects three entities simultaneously. Now make a new iteration for this data model.
+
+Hospital
+
+| hospital_id | name         | adress           |
+| ----------- | ------------ | ---------------- |
+| 1           | Sjukhusstock | Drottninggatan 3 |
+| 2           | SÖS          | Skjukhusbacken 10|
+
+Department
+
+| department_id | name       |
+| ------------- | ---------- |
+| 1             | Kardiologi |
+| 2             | Neurologi  |
+
+Doctor
+
+| doctor_id | first_name | last_name  |
+| --------- | ---------- | ---------- |
+| 1         | Abra       | Arbahamson |
+| 2         | Erika      | Eriksson   |
+| 3         | Bob        | Bobson     |
+
+Hospital/department
+
+| hospital_department_id | hospital_id | department_id |
+| ---------------------- | ----------- | ------------- |
+| 1                      | 1           | 1             |
+| 2                      | 1           | 2             |
+
+
+
+Doctor / Department / Hospital
+
+| doctor_department_hospital_id | doctor_id | department_id | hospital_id |
+| ----------------------------- | --------- | ------------- | ----------- |
+| 1                             | 1         | 1             | 1           |
+| 2                             | 1         | 2             | 2           |
+| 3                             | 2         | 1             | 2           |
+| 4                             | 2         | 2             | 1           |
+
+c) In your design do you have bridge tables as well in addition to the ternary relationship. Motivate why you should or should not have them.
