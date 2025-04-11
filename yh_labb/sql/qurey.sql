@@ -21,15 +21,14 @@ inner join yrkesco.skolpersonal sp on p2.personal_id = sp.personal_id
 inner join yrkesco.skola s on sp.skol_id = s.skol_id
 where p.programnamn = 'Data engineer' and s.skolnamn = 'YrkesCo Stockholm';
 
--- Utbildningsledare som ansvarar för Data Engineer klassen i stockholm
+-- Utbildningsledare som ansvarar för Data Engineer klassen 24 i stockholm
 SELECT bo.program_id || bo.år as klass, p.förnamn ||' '|| p.efternamn as Utbildningsledare, s.skolnamn
 FROM personal p
 inner join klass kl on p.personal_id = kl.personal_id
 inner join yrkesroll y on p.yrkes_id = y.yrkes_id
 inner join beviljade_omgångar bo on kl.bo_id = bo.bo_id
 inner join skola s on kl.skol_id = s.skol_id 
-inner join "program" p2 on bo.program_id = p2.program_id 
-where y.yrkes_id = 1 and bo.år = '24' and bo.program_id = 'DE' and s.skolnamn = 'YrkesCo Stockholm';
+where y.titel= 'Utbildningsledare' and bo.år = '24' and bo.program_id = 'DE' and s.skolnamn = 'YrkesCo Stockholm';
 
 -- Vilka som ingår i Ledningsgrupperna 
 SELECT lg.program_id,sk.skolnamn ,p.förnamn as personal, y.titel, s.förnamn as student, f.företag_namn, f.representant
